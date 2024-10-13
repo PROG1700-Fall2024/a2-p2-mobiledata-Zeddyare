@@ -31,10 +31,7 @@ def main():
         costPerMb=(usage-200)*0.110 
     elif usage > 1000:
         cost=118.00
-    if costPerMb != 0.0:
-        totalCost= cost+costPerMb+1 # potential error in your examples adding an extra dollar anytime its in a per mb range.
-    else: 
-        totalCost= cost
+    totalCost= cost+costPerMb
 
     #print command for output
     print("\nTotal charge is: ${0:,.2f}".format(totalCost)) 
