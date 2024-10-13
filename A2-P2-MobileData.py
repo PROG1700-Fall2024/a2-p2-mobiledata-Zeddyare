@@ -15,7 +15,6 @@ def main():
     # Over 200Mb and up to and including 500Mb 	$0.105 per Mb 
     # Over 500Mb and up to and including 1Gb 	    $0.110 per Mb 
     # Over 1Gb 	                                $118.00 flat rate 
-
     usage=0.0
     cost=20.0
     costPerMb=0.0
@@ -32,7 +31,6 @@ def main():
     elif usage > 1000:
         cost=118.00
     totalCost= cost+costPerMb
-
     #print command for output
     print("\nTotal charge is: ${0:,.2f}".format(totalCost)) 
     # YOUR CODE ENDS HERE
