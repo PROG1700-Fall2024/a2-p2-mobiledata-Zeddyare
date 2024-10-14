@@ -25,12 +25,16 @@ def main():
     usage=int(input("\nEnter data usage (Mb): "))
     #if statements to find cost
     if usage > 200 and usage <=500:
-        costPerMb=(usage-200)*0.105
+        costPerMb=usage*0.105
     elif usage > 500 and usage <= 1000:
-        costPerMb=(usage-200)*0.110 
+        costPerMb=usage*0.110 
     elif usage > 1000:
         cost=118.00
-    totalCost= cost+costPerMb
+    
+    if usage > 200 and usage <1000:
+        totalCost=costPerMb
+    else: 
+        totalCost=cost
     #print command for output
     print("\nTotal charge is: ${0:,.2f}".format(totalCost)) 
     # YOUR CODE ENDS HERE
